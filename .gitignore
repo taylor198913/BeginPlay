@@ -1,38 +1,12 @@
-# Unreal generated folders
 Binaries/
 DerivedDataCache/
 Intermediate/
 Saved/
-Content/
-
-# Plugin generated folders
-Plugins/*/Binaries/
-Plugins/*/Intermediate/
-Plugins/*/Content/
-
-# IDE and editor folders
 .vs/
-.vscode/
 .idea/
 .cursor/
-.tmp/
 
-# Visual Studio / Rider user files
-*.suo
+*.sln
 *.user
-*.userosscache
-*.sln.docstates
-*.VC.db
-*.VC.opendb
 *.opensdf
-*.sdf
-
-# Python local environments
-MCP/Python/.venv/
-MCP/Python/unreal_mcp.egg-info/
-
-# Local external repos not intended as part of this game project
-TRELLIS/
-TRELLIS_official/
-TRELLIS_repo_20260608/
-TripoSR_repo/
+*.suo
