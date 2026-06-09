@@ -1,9 +1,86 @@
+# =========================
+# Unreal Engine Generated
+# =========================
+
 Binaries/
+DerivedDataCache/
 Intermediate/
 Saved/
-DerivedDataCache/
+
+# Crash reports / logs
+*.log
+
+# =========================
+# Visual Studio
+# =========================
+
+.vs/
+.vscode/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+
+# =========================
+# JetBrains Rider / IDEA
+# =========================
+
+.idea/
+*.iml
+
+# =========================
+# Cursor
+# =========================
 
 .cursor/
-.vs/
+
+# =========================
+# Temporary files
+# =========================
+
+.tmp/
+Temp/
+tmp/
+
+# =========================
+# Unreal Build
+# =========================
+
+Build/
+*.xcodeproj
+
+# =========================
+# UE Assets (只上传代码时)
+# =========================
+
+Content/
+
+# =========================
+# Third Party Plugins
+# =========================
 
 Plugins/UnrealMCP/
+
+# =========================
+# Local Tools / AI
+# =========================
+
+MCP/
+
+# =========================
+# External repositories
+# =========================
+
+*_repo/
+TRELLIS_repo_*/
+TripoSR_repo/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
