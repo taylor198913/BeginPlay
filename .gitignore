@@ -1,12 +1,9 @@
 Binaries/
-DerivedDataCache/
 Intermediate/
 Saved/
-.vs/
-.idea/
-.cursor/
+DerivedDataCache/
 
-*.sln
-*.user
-*.opensdf
-*.suo
+.cursor/
+.vs/
+
+Plugins/UnrealMCP/
