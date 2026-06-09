@@ -15,7 +15,7 @@ class UInventoryComponent;
  *
  * 新架构职责：
  * - 负责移动、摄像机、视角和拾取交互。
- * - 持有 UInventoryComponent，作为玩家背包数据的拥有者。
+ * - 在 C++ 构造函数中创建 UInventoryComponent，作为玩家背包数据的拥有者。
  * - 拾取物品时只调用 InventoryComponent->AddItem，不直接操作 UI。
  * - 不创建背包 Widget，不切换输入模式，不显示/隐藏鼠标。
  *
@@ -59,7 +59,7 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera", meta = (AllowPrivateAccess = "true"))
 	UCameraComponent* Camera;
 
-	/** 背包组件引用，由 BP_MyCharacter 挂载 BP_InventoryComponent，BeginPlay 时查找。 */
+	/** 背包组件由 C++ 默认创建，角色出生时必定拥有一份背包数据。 */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Inventory", meta = (AllowPrivateAccess = "true"))
 	UInventoryComponent* InventoryComponent = nullptr;
 

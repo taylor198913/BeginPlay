@@ -20,17 +20,18 @@ AMyCharacter::AMyCharacter()
 	// 创建第三人称摄像机。
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera Comp"));
 	Camera->SetupAttachment(SpringArm);
+
+	// 背包组件现在由 C++ 默认创建，避免依赖角色蓝图手动挂载组件。
+	InventoryComponent = CreateDefaultSubobject<UInventoryComponent>(TEXT("InventoryComponent"));
 }
 
 void AMyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// 背包组件由 BP_MyCharacter 蓝图挂载，C++ 在运行开始时查找引用。
-	InventoryComponent = FindComponentByClass<UInventoryComponent>();
 	if (!InventoryComponent && GEngine)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("角色没有挂载 InventoryComponent"));
+		GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, TEXT("角色没有 InventoryComponent"));
 	}
 }
 
